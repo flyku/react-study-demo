@@ -2,21 +2,12 @@ This is a collection of simple demos of React.js.
 
 These demos are purposely written in a simple and clear style. You will find no difficulty in following them to learn the powerful library.
 
-## Related Projects
-
-- [Flux Demo](https://github.com/ruanyf/extremely-simple-flux-demo)
-- [Webpack Demos](https://github.com/ruanyf/webpack-demos)
-- [React Router Tutorial](https://github.com/reactjs/react-router-tutorial)
-- [CSS Modules Demos](https://github.com/ruanyf/css-modules-demos)
-- [React Testing Demo](https://github.com/ruanyf/react-testing-demo)
-- [A boilerplate for React-Babel-Webpack project](https://github.com/ruanyf/react-babel-webpack-boilerplate)
-
 ## How to use
 
 First copy the repo into your disk.
 
 ```bash
-$ git clone git@github.com:ruanyf/react-demos.git
+$ git clone https://github.com/flyku/react-study-demo.git
 ```
 
 Then play with the source files under the repo's demo* directories.
@@ -62,8 +53,6 @@ Then play with the source files under the repo's demo* directories.
 
 ## Demo01: Render JSX
 
-[demo](http://ruanyf.github.io/react-demos/demo01/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo01/index.html)
-
 The template syntax in React is called [JSX](http://facebook.github.io/react/docs/displaying-data.html#jsx-syntax). It is allowed in JSX to put HTML tags directly into JavaScript codes. `ReactDOM.render()` is the method which translates JSX into HTML, and renders it into the specified DOM node.
 
 ```js
@@ -79,7 +68,6 @@ Before v0.14, React use `JSTransform.js` to translate `<script type="text/jsx">`
 
 ## Demo02: Use JavaScript in JSX
 
-[demo](http://ruanyf.github.io/react-demos/demo02/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo02/index.html)
 
 You could also use JavaScript in JSX. It takes angle brackets (&lt;) as the beginning of HTML syntax, and curly brackets (`{`) as the beginning of JavaScript syntax.
 
@@ -100,7 +88,7 @@ ReactDOM.render(
 
 ## Demo03: Use array in JSX
 
-[demo](http://ruanyf.github.io/react-demos/demo03/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo03/index.html)
+
 
 If a JavaScript variable is an array, JSX will implicitly concat all members of the array.
 
@@ -117,7 +105,7 @@ ReactDOM.render(
 
 ## Demo04: Define a component
 
-[demo](http://ruanyf.github.io/react-demos/demo04/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo04/index.html)
+
 
 `React.createClass()` creates a component class, which implements a render method to return an component instance of the class. You don't need to call `new` on the class in order to get an instance, just use it as a normal HTML tag.
 
@@ -163,7 +151,6 @@ var HelloMessage = React.createClass({
 
 ## Demo05: this.props.children
 
-[demo](http://ruanyf.github.io/react-demos/demo05/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo05/index.html)
 
 React uses `this.props.children` to access a component's children nodes.
 
@@ -197,7 +184,6 @@ React gave us an utility [`React.Children`](https://facebook.github.io/react/doc
 
 ## Demo06: PropTypes
 
-[demo](http://ruanyf.github.io/react-demos/demo06/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo06/index.html)
 
 Components have many specific attributes which are called ”props” in React and can be of any type.
 
@@ -261,7 +247,6 @@ ReactDOM.render(
 
 ## Demo07: Finding a DOM node
 
-[demo](http://ruanyf.github.io/react-demos/demo07/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo07/index.html)
 
 Sometimes you need to reference a DOM node in a component. React gives you the `ref` attribute to find it.
 
@@ -290,7 +275,6 @@ The desired DOM node should have a `ref` attribute, and `this.refs.[refName]` wo
 
 ## Demo08: this.state
 
-[demo](http://ruanyf.github.io/react-demos/demo08/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo08/index.html)
 
 React thinks of component as state machines, and uses `this.state` to hold component's state, `getInitialState()` to initialize `this.state`(invoked before a component is mounted), `this.setState()` to update `this.state` and re-render the component.
 
@@ -322,7 +306,6 @@ You could use component attributes to register event handlers, just like `onClic
 
 ## Demo09: Form
 
-[demo](http://ruanyf.github.io/react-demos/demo09/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo09/index.html)
 
 According to React's design philosophy, `this.state` describes the state of component and is mutated via user interactions, and `this.props` describes the properties of component and is stable and immutable.
 
@@ -354,7 +337,6 @@ More information on [official document](http://facebook.github.io/react/docs/for
 
 ## Demo10: Component Lifecycle
 
-[demo](http://ruanyf.github.io/react-demos/demo10/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo10/index.html)
 
 Components have three main parts of [their lifecycle](https://facebook.github.io/react/docs/working-with-the-browser.html#component-lifecycle): Mounting(being inserted into the DOM), Updating(being re-rendered) and Unmounting(being removed from the DOM). React provides hooks into these lifecycle part. `will` methods are called right before something happens, and `did` methods which are called right after something happens.
 
@@ -406,7 +388,6 @@ The following is [a whole list of lifecycle methods](http://facebook.github.io/r
 
 ## Demo11: Ajax
 
-[demo](http://ruanyf.github.io/react-demos/demo11/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo11/index.html)
 
 How to get the data of a component from a server or an API provider? The answer is using Ajax to fetch data in the event handler of `componentDidMount`. When the server response arrives, store the data with `this.setState()` to trigger a re-render of your UI.
 
@@ -449,7 +430,6 @@ ReactDOM.render(
 
 ## Demo12: Display value from a Promise
 
-[demo](http://ruanyf.github.io/react-demos/demo12/) / [source](https://github.com/ruanyf/react-demos/blob/master/demo12/index.html)
 
 This demo is inspired by Nat Pryce's article ["Higher Order React Components"](http://natpryce.com/articles/000814.html).
 
@@ -509,7 +489,7 @@ var RepoList = React.createClass({
 
 ## Demo13: Server-side rendering
 
-[source](https://github.com/ruanyf/react-demos/tree/master/demo13/src)
+[source](https://github.com/flyku/react-study-demo.git)
 
 This demo is copied from [github.com/mhart/react-server-example](https://github.com/mhart/react-server-example), but I rewrote it with JSX syntax.
 
